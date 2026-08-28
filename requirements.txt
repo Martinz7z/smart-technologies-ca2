@@ -1,0 +1,12 @@
+tensorflow==2.20.0
+numpy
+pandas
+matplotlib
+opencv-contrib-python
+scikit-learn
+pillow
+flask
+eventlet
+python-socketio==4.6.1
+python-engineio==3.13.2
+imgaug==0.4.0
