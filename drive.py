@@ -10,7 +10,7 @@ from PIL import Image
 from tensorflow.keras.models import load_model
 
 
-MODEL_PATH = "models/best_model.keras"
+MODEL_PATH = "models/experiment_3_model.keras"
 MAX_SPEED = 20.0
 MIN_SPEED = 8.0
 

@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 
-DATA_PATH = "data/driving_log_combined.csv"
+DATA_PATH = "data/driving_log_exp3.csv"
 RESULTS_PATH = "results"
 
 COLUMNS = [
@@ -161,13 +161,13 @@ def main():
     save_preprocessing_example(balanced_data)
 
     balanced_data.to_csv(
-        "data/driving_log_combined_balanced.csv",
+        "data/driving_log_exp3_balanced.csv",
         index=False,
         header=False,
     )
 
     print("\nSaved:")
-    print("data/driving_log_combined_balanced.csv")
+    print("data/driving_log_exp3_balanced.csv")
     print("results/steering_distribution_unbalanced.png")
     print("results/steering_distribution_balanced.png")
     print("results/preprocessing_example.png")
