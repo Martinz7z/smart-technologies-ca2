@@ -10,7 +10,7 @@ from PIL import Image
 from tensorflow.keras.models import load_model
 
 
-MODEL_PATH = "models/experiment_5_model.keras"
+MODEL_PATH = "models/experiment_4_model.keras"
 MAX_SPEED = 20.0
 MIN_SPEED = 8.0
 
@@ -64,12 +64,12 @@ def telemetry(sid, data):
     # Slow down for sharper turns.
     turn_strength = abs(steering_angle)
 
-    if turn_strength < 0.10:
-        target_speed = MAX_SPEED
-    elif turn_strength < 0.25:
-        target_speed = 15.0
+    if turn_strength < 0.05:
+        target_speed = 20.0
+    elif turn_strength < 0.12:
+        target_speed = 14.0
     else:
-        target_speed = MIN_SPEED
+        target_speed = 9.0
 
     throttle = 1.0 - (speed / target_speed)
 
