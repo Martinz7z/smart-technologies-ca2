@@ -12,8 +12,8 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import Adam
 
 
-DATA_PATH = "data/driving_log_exp4_balanced.csv"
-MODEL_PATH = "models/experiment_4_model.keras"
+DATA_PATH = "data/driving_log_exp5_balanced.csv"
+MODEL_PATH = "models/experiment_5_model.keras"
 RESULTS_PATH = "results"
 
 COLUMNS = [
@@ -179,7 +179,7 @@ def save_training_plot(history):
     plt.plot(history.history["loss"], label="Training Loss")
     plt.plot(history.history["val_loss"], label="Validation Loss")
 
-    plt.title("Experiment 4 Training History")
+    plt.title("Experiment 5 Training History")
     plt.xlabel("Epoch")
     plt.ylabel("Mean Squared Error")
     plt.legend()
@@ -189,7 +189,7 @@ def save_training_plot(history):
     plt.savefig(
         os.path.join(
             RESULTS_PATH,
-            "experiment_4_training_history.png",
+            "experiment_5_training_history.png",
         )
     )
 
@@ -263,7 +263,7 @@ def main():
     print(f"Best model saved to: {MODEL_PATH}")
     print(
     "Training plot saved to: "
-    "results/experiment_4_training_history.png"
+    "results/experiment_5_training_history.png"
 )
 
 
